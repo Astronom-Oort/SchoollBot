@@ -1,8 +1,8 @@
 # Description
 This bot sends school timetable
 
-# Telegram link
-One day I will host this bot)
+# Bot link
+One day I will host this bot and attach its link)
 
 # Commands/reply
 ***Расписание понедельник***

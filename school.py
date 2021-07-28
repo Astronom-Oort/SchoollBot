@@ -24,7 +24,7 @@ def welcome(message):
                      parse_mode='html', reply_markup=markup)
 
 
-@bot.message_handler(func=lambda n: True)
+@bot.message_handler()
 def response(message):
         if message.text == 'Расписание понедельник':
             bot.reply_to(message,

@@ -6,23 +6,19 @@ from telebot import types
 token = 'Your token here'
 bot = telebot.TeleBot(token)
 
-
-@bot.message_handler(commands=['start'])
-def welcome(message):
-    # sti = open('bot.webp', 'rb')
-
-
-
-    # keyboard
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1 = types.KeyboardButton("Расписание понедельник")
-    item2 = types.KeyboardButton("Расписание вторник")
-    item3 = types.KeyboardButton("Расписание среда ")
-    item4 = types.KeyboardButton('Расписание четверг')
-    item5 = types.KeyboardButton('Расписание пятница')
+ # keyboard
+ markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+ item1 = types.KeyboardButton("Расписание понедельник")
+ item2 = types.KeyboardButton("Расписание вторник")
+ item3 = types.KeyboardButton("Расписание среда ")
+ item4 = types.KeyboardButton('Расписание четверг')
+ item5 = types.KeyboardButton('Расписание пятница')
 
     markup.add(item1, item2, item3, item4, item5)
 
+
+@bot.message_handler(commands=['start'])
+def welcome(message):
     bot.send_message(message.chat.id,
                      "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>, бот,созданный,чтобы присылать расписание.".format(
                          message.from_user, bot.get_me()),
@@ -30,7 +26,7 @@ def welcome(message):
 
 
 @bot.message_handler(func=lambda n: True)
-def text_text(message):
+def response(message):
         if message.text == 'Расписание понедельник':
             bot.reply_to(message,
                              '1.Химия\n''2.Алгебра\n''3.Физ-ра\n''4.ОБЖ/Информатика\n''5.Русский язык\n' '6.Английский язык\n''7.Литературный практикум\n')

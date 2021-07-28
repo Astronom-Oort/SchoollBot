@@ -6,15 +6,14 @@ from telebot import types
 token = 'Your token here'
 bot = telebot.TeleBot(token)
 
- # keyboard
- markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
- item1 = types.KeyboardButton("Расписание понедельник")
- item2 = types.KeyboardButton("Расписание вторник")
- item3 = types.KeyboardButton("Расписание среда ")
- item4 = types.KeyboardButton('Расписание четверг')
- item5 = types.KeyboardButton('Расписание пятница')
-
-    markup.add(item1, item2, item3, item4, item5)
+# keyboard
+markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+item1 = types.KeyboardButton("Расписание понедельник")
+item2 = types.KeyboardButton("Расписание вторник")
+item3 = types.KeyboardButton("Расписание среда ")
+item4 = types.KeyboardButton('Расписание четверг')
+item5 = types.KeyboardButton('Расписание пятница')
+markup.add(item1, item2, item3, item4, item5)
 
 
 @bot.message_handler(commands=['start'])

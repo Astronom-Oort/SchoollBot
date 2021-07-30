@@ -1,10 +1,7 @@
-# Description
-This bot sends school timetable
+# Описание
+Этот бот присылает расписание уроков на выбранный день недели
 
-# Bot link
-One day I will host this bot and attach its link)
-
-# Commands/reply
+# Команды
 ***Расписание понедельник***
 
 1.Химия                           
